@@ -1,0 +1,45 @@
+.nav-top {
+	width: 100vw;
+	height: 10vh;
+	border-bottom: 1px solid #e7e7e7;
+}
+.nav-con {
+	display: inline-block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+}
+.brand, .user, .items-num, .seperator {
+	display: inline-block;
+}
+.user {
+	float: right;
+}
+.items-num {
+	text-align: center;
+	height: 40px;
+	width: 40px;
+	float: right;
+	border: 1px solid black;
+	border-radius: 100%;
+}
+.seperator {
+	float: right;
+	font-weight: lighter;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.nav-tabs > li.active > a {
+	border-radius: 0px;
+}
+.nav > li > a {
+	color: black;
+	font-size: 14px;
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+
