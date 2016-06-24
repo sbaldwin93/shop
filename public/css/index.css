@@ -1,7 +1,7 @@
 .nav-top {
 	width: 100vw;
 	height: 10vh;
-	border-bottom: 1px solid #e7e7e7;
+	border-bottom: 1px solid #ff5050;
 }
 .nav-con {
 	display: inline-block;
@@ -12,6 +12,9 @@
 .brand, .user, .items-num, .seperator {
 	display: inline-block;
 }
+.brand, .user, .items-num {
+	color: #ff5050;
+}
 .user {
 	float: right;
 }
@@ -20,7 +23,7 @@
 	height: 40px;
 	width: 40px;
 	float: right;
-	border: 1px solid black;
+	border: 1px solid #ff5050;
 	border-radius: 100%;
 }
 .seperator {
@@ -31,6 +34,8 @@
 }
 .nav-tabs > li.active > a {
 	border-radius: 0px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
 }
 .nav > li > a {
 	color: black;
@@ -39,7 +44,25 @@
 	padding-right: 5px;
 	padding-top: 10px;
 	padding-bottom: 10px;
+	border-bottom: 0px;
 }
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	border: 1px solid #ff5050;
+	color: #ff5050;
+	border-top: none;
+	border-bottom-color: white;
+}
+.nav-tabs {
+	border-bottom-color: #ff5050;
+}
+.nobot {
+	border-bottom: 0px;
+}
+#item-quantity {
+	width: 50px;
+	text-align: center;
+}
+
 
 
 
