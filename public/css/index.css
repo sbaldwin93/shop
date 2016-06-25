@@ -1,19 +1,25 @@
 .nav-top {
 	width: 100vw;
-	height: 10vh;
+	height: 70px;
 	border-bottom: 1px solid #ff5050;
 }
 .nav-con {
 	display: inline-block;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	/*padding-top: 10px;
+	padding-bottom: 10px;*/
 	width: 100%;
 }
 .brand, .user, .items-num, .seperator {
 	display: inline-block;
 }
+.items-num {
+	margin-top: 15px;
+}
 .brand, .user, .items-num {
 	color: #ff5050;
+}
+.brand, .user {
+	font-family: 'Quicksand', sans-serif;
 }
 .user {
 	float: right;
@@ -39,12 +45,13 @@
 }
 .nav > li > a {
 	color: black;
-	font-size: 14px;
+	font-size: 15px;
 	padding-left: 5px;
 	padding-right: 5px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-bottom: 0px;
+	font-family: 'Quicksand', sans-serif;
 }
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
 	border: 1px solid #ff5050;
@@ -61,6 +68,9 @@
 #item-quantity {
 	width: 50px;
 	text-align: center;
+}
+#add, #remove {
+	width: 40px;
 }
 
 

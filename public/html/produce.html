@@ -2,20 +2,20 @@
 	<table class="table">
 		<thead>
 			<tr>
-				<th>Item</th>
-				<th>Quantity</th>
+				<th class="nobot">Item</th>
+				<th class="nobot">Quantity</th>
 			</tr>
 		</thead>
 		<tbody>
 			<tr>
 				<td><input class="form-control" id="item-name" ng-model="item.name"></td>
 				<td><input class="form-control" id="item-quantity" ng-model="item.quantity"></td>
-				<td><button class="btn btn-success" ng-click="addItem()">+</button>
+				<td><button class="btn btn-success" id="add" ng-click="addProduce()">+</button>
 			</tr>
-			<tr ng-repeat="item in items">
+			<tr ng-repeat="item in items | filter : { type: 'produce' }">
 				<td>{{item.name}}</td>
 				<td>{{item.quantity}}</td>
-				<td><button class="btn btn-danger" ng-click="delete(item._id)">Remove</button></td>
+				<td><button class="btn btn-danger" id="remove" ng-click="delete(item._id)">-</button></td>
 			</tr>
 		</tbody>
 	</table>

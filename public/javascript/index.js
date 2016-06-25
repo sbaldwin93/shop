@@ -1,8 +1,7 @@
 angular.module('shop', ['ngRoute'])
 var mainController = function($scope, $http) {
-	var itemsArray = [];
 	$http.get('/api/me').then(function(returnData) {
-			$scope.user = returnData.data;
+		$scope.user = returnData.data;
 	});
 	var refresh = function(id) {
 		var data = {};
@@ -13,12 +12,54 @@ var mainController = function($scope, $http) {
 
 	};
 	refresh();
-	
-	$scope.addItem = function() {
+	$scope.addProduce = function() {
 		var request = {
 			name: $scope.item.name,
 			quantity: $scope.item.quantity,
-			userSubmitted: $scope.user._id
+			type: 'produce',
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.items = response;
+			refresh()
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addMeat = function() {
+		var request = {
+			name: $scope.item.name,
+			quantity: $scope.item.quantity,
+			type: 'meat',
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.items = response;
+			refresh()
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addDairy = function() {
+		var request = {
+			name: $scope.item.name,
+			quantity: $scope.item.quantity,
+			type: 'dairy',
+			userId: $scope.user._id
+		}
+		$http.post('/api/items/post', request).success(function(response) {
+			$scope.items = response;
+			refresh()
+		}).error(function(error) {
+			console.log(error);
+		});
+	};
+	$scope.addOther = function() {
+		var request = {
+			name: $scope.item.name,
+			quantity: $scope.item.quantity,
+			type: 'other',
+			userId: $scope.user._id
 		}
 		$http.post('/api/items/post', request).success(function(response) {
 			$scope.items = response;
@@ -32,9 +73,7 @@ var mainController = function($scope, $http) {
 			refresh();
 		})
 		
-	}
-
-	
+	}	
 };
 
 
@@ -56,26 +95,28 @@ angular.module('shop')
 				templateUrl: '/html/items.html',
 				controller : 'mainController'
 			})
-			.when('/fruit', {
-				templateUrl: '/html/fruit.html',
-				controller : 'mainController'
-			})
-			.when('/veggies', {
-				templateUrl: '/html/veggies.html',
+			.when('/produce', {
+				templateUrl: '/html/produce.html',
 				controller : 'mainController'
 			})
 			.when('/meat', {
 				templateUrl: '/html/meat.html',
 				controller : 'mainController'
 			})
-			.when('/poultry', {
-				templateUrl: '/html/poultry.html',
+			.when('/dairy', {
+				templateUrl: '/html/dairy.html',
 				controller : 'mainController'
 			})
-			.when('/drinks', {
-				templateUrl: '/html/drinks.html',
+			.when('/other', {
+				templateUrl: '/html/other.html',
 				controller : 'mainController'
-			})
+			})		
 	}])
 angular.module('shop')
 	.controller('mainController', mainController);
+
+
+
+
+
+

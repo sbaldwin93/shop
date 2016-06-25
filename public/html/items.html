@@ -1,1 +1,18 @@
-<h1>items</h1>
+<div class="container-fluid">
+	<table class="table">
+		<thead>
+			<tr>
+				<th class="nobot">Item</th>
+				<th class="nobot">Quantity</th>
+				<th class="nobot">Type</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="item in items">
+				<td>{{item.name}}</td>
+				<td>{{item.quantity}}</td>
+				<td>{{item.type}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

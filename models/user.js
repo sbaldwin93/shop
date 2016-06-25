@@ -4,8 +4,7 @@ var Schema = mongoose.Schema;
 var userSchema = mongoose.Schema({
 	name    : {type: String, required: true},
 	username: {type: String, required: true, unique: true},
-	password: {type: String, required: true},
-	submissions: {type: Schema.Types.ObjectId, ref: 'items'}
+	password: {type: String, required: true}
 });
 userSchema.pre('save', function(next) {
 	if(!this.isModified('password')) return next();

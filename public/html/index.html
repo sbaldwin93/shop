@@ -12,9 +12,7 @@
     	<!-- JQUERY LIBRARIES -->
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<!-- GOOGLE FONTS -->
-  		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
-  		<link href='https://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
-  		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  		<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
   		<!-- FONT AWESOME -->
   		<script src="https://use.fontawesome.com/baae04bd13.js"></script>
 	</head>
@@ -22,12 +20,12 @@
 		<div class="nav-top">
 			<div class="container">
 				<div class="nav-con">
-					<h4 class="brand">Shop</h4>
+					<h3 class="brand">Shop</h3>
 					<div class="items-num">
-						<h4>0</h4>
+						
 					</div>
-					<h4 class="seperator">|</h4>
-					<h4 class="user">{{user.name}}</h4>
+					<h3 class="seperator">|</h3>
+					<h3 class="user">{{user.name}}</h3>
 				</div>
 			</div>
 		</div>
@@ -35,19 +33,24 @@
 		<div>
 			<ul class="nav nav-tabs" role="tablist">
 			    <li role="presentation" class="active"><a href="#items" aria-controls="home" role="tab" data-toggle="tab">Items</a></li>
-			    <li role="presentation"><a href="#fruit" aria-controls="profile" role="tab" data-toggle="tab">Fruit</a></li>
-			    <li role="presentation"><a href="#veggies" aria-controls="messages" role="tab" data-toggle="tab">Veggies</a></li>
+			    <li role="presentation"><a href="#produce" aria-controls="profile" role="tab" data-toggle="tab">Produce</a></li>
 			    <li role="presentation"><a href="#meat" aria-controls="messages" role="tab" data-toggle="tab">Meat</a></li>
-			    <li role="presentation"><a href="#poultry" aria-controls="messages" role="tab" data-toggle="tab">Poultry</a></li>
-			    <li role="presentation"><a href="#drinks" aria-controls="messages" role="tab" data-toggle="tab">Drinks</a></li>
+			    <li role="presentation"><a href="#dairy" aria-controls="messages" role="tab" data-toggle="tab">Dairy</a></li>
+			    <li role="presentation"><a href="#other" aria-controls="messages" role="tab" data-toggle="tab">Other</a></li>
 			</ul>
 			<div class="tab-content">
 				<div ng-view></div>
 			</div>
 		</div>
+
+
+		
+
+
+
 		<!-- BOOTSTRAP -->
 		<script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
-		<!-- BOOTSTRAP TABS -->
+		<!-- BOOTSTRAP THEMES -->
 		<script src="/node_modules/bootstrap/js/tab.js"></script>
 		<!-- ANGULAR -->
 		<script src="/node_modules/angular/angular.min.js"></script>
