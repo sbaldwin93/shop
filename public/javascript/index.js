@@ -1,18 +1,20 @@
 angular.module('shop', ['ngRoute'])
+var itemsArray = [];
 var mainController = function($scope, $http) {
 	$http.get('/api/me').then(function(returnData) {
 		$scope.user = returnData.data;
 	});
 	var refresh = function(id) {
-		var data = {};
-		$http.get('/api/items/get', data).success(function(response) {
-			$scope.items = response;
+		var data = {}
+		$http.get('/api/items/get/' + $scope.userId, data).success(function(response) {
+			$scope.itemsArray = response;
 			$scope.item = "";
+			$scope.count = $scope.itemsArray.length.toString()
 		});
-
 	};
 	refresh();
 	$scope.addProduce = function() {
+		$scope.itemsArray = [];
 		var request = {
 			name: $scope.item.name,
 			quantity: $scope.item.quantity,
@@ -20,13 +22,14 @@ var mainController = function($scope, $http) {
 			userId: $scope.user._id
 		}
 		$http.post('/api/items/post', request).success(function(response) {
-			$scope.items = response;
+			$scope.itemsArray.push(response);
 			refresh()
 		}).error(function(error) {
 			console.log(error);
 		});
 	};
 	$scope.addMeat = function() {
+		$scope.itemsArray = [];
 		var request = {
 			name: $scope.item.name,
 			quantity: $scope.item.quantity,
@@ -34,13 +37,14 @@ var mainController = function($scope, $http) {
 			userId: $scope.user._id
 		}
 		$http.post('/api/items/post', request).success(function(response) {
-			$scope.items = response;
+			$scope.itemsArray.push(response);
 			refresh()
 		}).error(function(error) {
 			console.log(error);
 		});
 	};
 	$scope.addDairy = function() {
+		$scope.itemsArray = [];
 		var request = {
 			name: $scope.item.name,
 			quantity: $scope.item.quantity,
@@ -48,13 +52,14 @@ var mainController = function($scope, $http) {
 			userId: $scope.user._id
 		}
 		$http.post('/api/items/post', request).success(function(response) {
-			$scope.items = response;
+			$scope.itemsArray.push(response);
 			refresh()
 		}).error(function(error) {
 			console.log(error);
 		});
 	};
 	$scope.addOther = function() {
+		$scope.itemsArray = [];
 		var request = {
 			name: $scope.item.name,
 			quantity: $scope.item.quantity,
@@ -62,7 +67,7 @@ var mainController = function($scope, $http) {
 			userId: $scope.user._id
 		}
 		$http.post('/api/items/post', request).success(function(response) {
-			$scope.items = response;
+			$scope.itemsArray.push(response);
 			refresh()
 		}).error(function(error) {
 			console.log(error);

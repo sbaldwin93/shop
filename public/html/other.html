@@ -4,6 +4,7 @@
 			<tr>
 				<th class="nobot">Item</th>
 				<th class="nobot">Quantity</th>
+				<th class="nobot">+  /  -</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -12,10 +13,10 @@
 				<td><input class="form-control" id="item-quantity" ng-model="item.quantity"></td>
 				<td><button class="btn btn-success" id="add" ng-click="addOther()">+</button>
 			</tr>
-			<tr ng-repeat="item in items | filter : { type: 'other' }">
-				<td>{{item.name}}</td>
-				<td>{{item.quantity}}</td>
-				<td><button class="btn btn-danger" id="remove" ng-click="delete(item._id)">-</button></td>
+			<tr ng-repeat="item in itemsArray | filter : { type: 'other' }">
+				<td id="td">{{item.name}}</td>
+				<td id="td">{{item.quantity}}</td>
+				<td><button class="btn btn-danger" id="item-remove" ng-click="delete(item._id)">-</button></td>
 			</tr>
 		</tbody>
 	</table>

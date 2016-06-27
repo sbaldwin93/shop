@@ -45,9 +45,10 @@ app.get('/api/me', function(req, res){
 app.get('/', function(req, res){
   res.sendFile('/html/index.html', {root : './public'})
 });
-app.get('/api/items/get', apiController.getItems);
+app.get('/api/items/get/:userId', apiController.getItems);
 app.post('/api/items/post', apiController.postItems);
 app.delete('/api/items/delete/:id', apiController.deleteItems);
+
 
 
 

@@ -1,21 +1,24 @@
-
 var Item = require('../models/items');
 
 module.exports = {
 	postItems: function(req, res) {
-		var item = new Item(req.body);
-		item.save();
-		Item.find({}).exec(function(err, allItems) {
+		var items = new Item({
+			name: req.body.name,
+			quantity: req.body.quantity,
+			type: req.body.type,
+			userId: req.user._id
+		});
+		items.save(function(err, allItems) {
 			if(err) {
 				res.error(err);
 			}
 			else {
-				res.json(allItems)
+				res.json(allItems);
 			}
-		}
-	)},
+		})
+	},
 	getItems: function(req, res) {
-		Item.find({}).exec(function(err, allItems) {
+		Item.find({userId: req.user._id}).exec(function(err, allItems) {
 			if(err) {
 				res.error(err);
 			}
