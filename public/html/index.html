@@ -13,8 +13,6 @@
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<!-- GOOGLE FONTS -->
   		<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
-  		<!-- FONT AWESOME -->
-  		<script src="https://use.fontawesome.com/baae04bd13.js"></script>
 	</head>
 	<body ng-controller="mainController" ng-cloak>
 		<div class="nav-top">
@@ -39,17 +37,11 @@
 			    <li role="presentation"><a href="#other" aria-controls="messages" role="tab" data-toggle="tab">Other</a></li>
 			</ul>
 			<div class="tab-content">
-				<div ng-view></div>
+				<div ng-view class="view"></div>
 			</div>
 		</div>
-
-
-		
-
-
-
 		<!-- BOOTSTRAP -->
-		<script src="/node_modules/bootstrap/dist/js/bootstrap.js"></script>
+		<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<!-- BOOTSTRAP THEMES -->
 		<script src="/node_modules/bootstrap/js/tab.js"></script>
 		<!-- ANGULAR -->

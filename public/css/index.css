@@ -1,3 +1,6 @@
+body {
+	font-family: 'Quicksand', sans-serif;
+}
 .nav-top {
 	width: 100vw;
 	height: 70px;
@@ -16,9 +19,6 @@
 .brand, .user, .items-num {
 	color: #ff5050;
 }
-.brand, .user {
-	font-family: 'Quicksand', sans-serif;
-}
 .user {
 	float: right;
 	color: #ff5050;
@@ -36,6 +36,7 @@
 	font-weight: lighter;
 	padding-left: 10px;
 	padding-right: 10px;
+	color: #ddd;
 }
 .nav-tabs > li.active > a {
 	border-radius: 0px;
@@ -43,30 +44,25 @@
 	border-bottom-right-radius: 0px;
 }
 .nav > li > a {
-	color: black;
+	color: #ff5050;
 	font-size: 15px;
 	padding-left: 5px;
 	padding-right: 5px;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	border-bottom: 0px;
-	font-family: 'Quicksand', sans-serif;
-}
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-	border: 1px solid #ff5050;
-	color: #ff5050;
-	border-top: none;
-	border-bottom-color: white;
 }
 .nav-tabs {
 	border-bottom-color: #ff5050;
 }
 #item-quantity {
-	width: 40px;
+	width: 60px;
 	text-align: center;
 }
 #item-name, #item-quantity {
 	border: 1px solid #ccc;
+}
+#item-name {
 }
 #add, #remove {
 	width: 40px;
@@ -77,6 +73,13 @@
 	color: #5cb85c;
 }
 #item-remove {
+	/*float: right;*/
+	width: 40px;
+	border: 1px solid #d9534f;
+	background-color: white;
+	color: #d9534f;
+}
+#items-remove {
 	float: right;
 	width: 40px;
 	border: 1px solid #d9534f;
@@ -91,7 +94,6 @@
 }
 .plus-minus {
 	color: #ff5050;
-	font-family: 'Quicksand', sans-serif;
 }
 .table {
 	margin-bottom: 0px;
@@ -100,27 +102,45 @@
 	margin-top: 5px;
 	display: inline-block;
 	font-size: 20px;
-	font-family: 'Quicksand', sans-serif;
 }
 .nobot {
 	color: #ff5050;
-	font-family: 'Quicksand', sans-serif;
 }
 .quant {
 	color: #ff5050;
-	font-family: 'Quicksand', sans-serif;
 	text-align: center;
 }
 #td {
-	font-family: 'Quicksand', sans-serif;
+	color: #29a329;
+	padding-top: 13px;
+	font-size: 15px;
+}
+#tdq {
 	color: #5cb85c;
 	padding-top: 13px;
+	font-size: 15px;
+	width: 40px;
+	text-align: center;
 }
 #tt {
-	font-family: 'Quicksand', sans-serif;
-	color: #5cb85c;
+	color: #29a329;
 	padding-top: 13px;
-	width: 130px;
+	width: 43vw;
+	font-size: 15px;
+}
+.view {
+	background-color: #fcfcfc;
+}
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+	border: 1px solid #ff5050;
+	color: #29a329;
+	border-top: none;
+	border-bottom-color: #fcfcfc;
+	background-color: #fcfcfc;
+}
+.plus-minus {
+	width: 4px;
+	text-align: center;
 }
 
 
