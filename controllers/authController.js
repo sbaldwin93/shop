@@ -3,7 +3,8 @@ var User = require('../models/user');
 var performLogin = function(req, res, next, user) {
 	req.login(user, function(err) {
 		if(err) return next(err);
-		return res.redirect('/html/index.html');
+		//return res.redirect('/html/index.html');
+		return res.redirect('/');
 	});
 };
 var authenticationController = {

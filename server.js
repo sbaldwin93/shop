@@ -28,11 +28,12 @@ app.get('/auth/login', authenticationController.login);
 app.post('/auth/login', authenticationController.processLogin);
 app.post('/auth/signup', authenticationController.processSignup);
 app.get('/auth/logout', authenticationController.logout);
-app.use(passportConfig.ensureAuthenticated);
+//app.use(passportConfig.ensureAuthenticated);
 // ROUTES \\
 app.get('/api/me', function(req, res){
 	res.send(req.user)
 })
+app.use(passportConfig.ensureAuthenticated);
 app.get('/', function(req, res){
   res.sendFile('/html/index.html', {root : './public'})
 });
