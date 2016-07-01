@@ -44,11 +44,6 @@ body {
 	width: 60px;
 	text-align: center;
 }
-#item-name, #item-quantity {
-	border: 1px solid #ccc;
-}
-#item-name {
-}
 #add, #remove {
 	width: 40px;
 }
