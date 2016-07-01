@@ -1,6 +1,7 @@
 (function() {
 angular.module('shop', ['ngRoute'])
-var mainController = function($scope, $http) {
+angular.module('shop')
+	.controller('mainController', ['$scope', '$http', function($scope, $http) {
 	var itemsArray = [];
 	$http.get('/api/me').then(function(returnData) {
 		$scope.user = returnData.data;
@@ -10,7 +11,7 @@ var mainController = function($scope, $http) {
 		$http.get('/api/items/get/' + $scope.userId, data).success(function(response) {
 			$scope.itemsArray = response;
 			$scope.item = "";
-			$scope.count = $scope.itemsArray.length.toString()
+			$scope.count = $scope.itemsArray.length.toString();
 		});
 	};
 	refresh();
@@ -79,37 +80,35 @@ var mainController = function($scope, $http) {
 			refresh();
 		});	
 	};
-};	
-angular.module('shop')
-.config(['$routeProvider', function($routeProvider) {
-	$routeProvider
-	.when('/', {
-		templateUrl: '/html/items.html',
-		controller : 'mainController'
-	})
-	.when('/items', {
-		templateUrl: '/html/items.html',
-		controller : 'mainController'
-	})
-	.when('/produce', {
-		templateUrl: '/html/produce.html',
-		controller : 'mainController'
-	})
-	.when('/meat', {
-		templateUrl: '/html/meat.html',
-		controller : 'mainController'
-	})
-	.when('/dairy', {
-		templateUrl: '/html/dairy.html',
-		controller : 'mainController'
-	})
-	.when('/other', {
-		templateUrl: '/html/other.html',
-		controller : 'mainController'
-	})		
 }]);
 angular.module('shop')
-	.controller('mainController', mainController);
+.config(['$routeProvider', function($routeProvider) {
+		$routeProvider
+		.when('/', {
+			templateUrl: '/html/items.html',
+			controller : 'mainController'
+		})
+		.when('/items', {
+			templateUrl: '/html/items.html',
+			controller : 'mainController'
+		})
+		.when('/produce', {
+			templateUrl: '/html/produce.html',
+			controller : 'mainController'
+		})
+		.when('/meat', {
+			templateUrl: '/html/meat.html',
+			controller : 'mainController'
+		})
+		.when('/dairy', {
+			templateUrl: '/html/dairy.html',
+			controller : 'mainController'
+		})
+		.when('/other', {
+			templateUrl: '/html/other.html',
+			controller : 'mainController'
+		})		
+	}]);
 }());
 
 

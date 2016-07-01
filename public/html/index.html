@@ -5,24 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
 		<title>Welcome</title>
+		<intercept-url pattern="/favicon.ico" access="ROLE_ANONYMOUS" />
 		<!-- BOOTSTRAP -->
-    	<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    	<link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.min.css">
     	<!-- LOGIN.CSS -->
     	<link rel="stylesheet" href="/css/index.css">
     	<!-- JQUERY LIBRARIES -->
     	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   		<!-- GOOGLE FONTS -->
   		<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+  		<!-- FONT AWESOME -->
+  		<script src="https://use.fontawesome.com/baae04bd13.js"></script>
 	</head>
 	<body ng-controller="mainController" ng-cloak>
 		<div class="nav-top">
 			<div class="container">
 				<div class="nav-con">
 					<h3 class="brand">Shop</h3>
-					<div class="items-num">
-						<div class="number" ng-model="count">{{count}}</div>
-					</div>
-					<h3 class="seperator">|</h3>
 					<h3 class="user">{{user.name}}</h3>
 				</div>
 			</div>

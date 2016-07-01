@@ -32,7 +32,7 @@ app.get('/auth/logout', authenticationController.logout);
 // ROUTES \\
 app.get('/api/me', function(req, res){
 	res.send(req.user)
-})
+});
 app.use(passportConfig.ensureAuthenticated);
 app.get('/', function(req, res){
   res.sendFile('/html/index.html', {root : './public'})

@@ -23,21 +23,6 @@ body {
 	float: right;
 	color: #ff5050;
 }
-.items-num {
-	text-align: center;
-	height: 40px;
-	width: 40px;
-	float: right;
-	border: 1px solid #ff5050;
-	border-radius: 100%;
-}
-.seperator {
-	float: right;
-	font-weight: lighter;
-	padding-left: 10px;
-	padding-right: 10px;
-	color: #ddd;
-}
 .nav-tabs > li.active > a {
 	border-radius: 0px;
 	border-bottom-left-radius: 0px;
@@ -98,11 +83,6 @@ body {
 .table {
 	margin-bottom: 0px;
 }
-.number {
-	margin-top: 5px;
-	display: inline-block;
-	font-size: 20px;
-}
 .nobot {
 	color: #ff5050;
 }
@@ -141,6 +121,32 @@ body {
 .plus-minus {
 	width: 4px;
 	text-align: center;
+}
+.cart-num {
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+.number {
+	margin-top: 5px;
+	margin-left: 2px;
+	display: inline-block;
+	font-size: 20px;
+}
+.seperator {
+	display: inline-block;
+	font-weight: lighter;
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #ddd;
+}
+.items-num {
+	display: inline-block;
+	text-align: center;
+	height: 40px;
+	width: 40px;
+	border: 1px solid #ff5050;
+	border-radius: 100%;
 }
 
 
